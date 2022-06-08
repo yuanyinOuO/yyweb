@@ -1,12 +1,17 @@
 body{
     margin: 0px;
 }
+a{
+    text-decoration: none;
+}
+/* 選單 */
 .menu{
-    position: fixed;top: 0px;left: 0px;
+    position: fixed;top: 0px;bottom: 0px;left: 0px;
     width: 16%;
-    height: 100%;
+    
     background-color: #f6f6f6;
 }
+/* 選單頂部 */
 .menu-top{
     text-align: center;
 }
@@ -20,12 +25,16 @@ body{
     font-size: 20px;
     margin: 0px;
 }
+/* 選單連結 */
 .menu-middle{
 
 }
-.menu-middle ul{
+.menu-middle .menu-link{
     list-style: none;
     padding-left: 0px;
+}
+.menu-middle .menu-link ul{
+    line-height: 10px;
 }
 .menu-middle li {
     max-width: inherit;
@@ -50,21 +59,37 @@ body{
     font-size: 20px;
     margin-right: 10px;
 }
+/* 選單底部 */
 .menu-footer{
     position: absolute;bottom: 0px;
-    width: 100px;
-    height: 100px;
+    width: 100%;
     background-color: blue;
 }
-.content{
-    margin-left: 16%;
+.link-icon{
+
 }
-.content .live2d{
-    position: fixed;right: 0px;bottom: 0px;
+/* 側邊欄 */
+.nav::-webkit-scrollbar{
+    display: none;
 }
-.content .live2d img{
+.nav{
+    position: fixed;top: 0px;right: 0px;bottom: 0px;
+    background-color: #f6f6f6;
+    padding: 20px;
+    overflow: scroll;
+}
+.nav .date{
+    
+}
+.nav .live2d{
+    position: relative;bottom: 0px;right: 0px;
+}
+.nav .live2d img{
     width: 200px;
 }
-.content .date{
-    position: absolute;top: 0px;right: 0px;
+
+
+/* 內文 */
+.content{
+    margin-left: 16%;
 }
