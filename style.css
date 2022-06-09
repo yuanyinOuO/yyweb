@@ -1,5 +1,6 @@
 body{
     margin: 0px;
+    cursor: url(),auto;
 }
 a{
     text-decoration: none;
@@ -8,8 +9,9 @@ a{
 .menu{
     position: fixed;top: 0px;bottom: 0px;left: 0px;
     width: 16%;
-    
     background-color: #f6f6f6;
+    display: flex;
+    flex-direction: column;
 }
 /* 選單頂部 */
 .menu-top{
@@ -26,26 +28,36 @@ a{
     margin: 0px;
 }
 /* 選單連結 */
+.menu-middle::-webkit-scrollbar{
+    display: none;
+}
 .menu-middle{
-
+    overflow: scroll;
+    
 }
 .menu-middle .menu-link{
     list-style: none;
     padding-left: 0px;
 }
 .menu-middle .menu-link ul{
-    line-height: 10px;
+    line-height: 15px;
+   
+}
+.menu-middle .menu-link i.arrow{
+    margin-left: 50%;
+    color: aqua;
 }
 .menu-middle li {
     max-width: inherit;
 }
 .menu-middle li a{
-    padding: 6px 20px;
+    padding: 6px 0px 6px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: block;
     text-decoration: none;
     color: black;
+    width: inherit;
 }
 .menu-middle li a:hover{
     background-color: #999999;
@@ -61,35 +73,55 @@ a{
 }
 /* 選單底部 */
 .menu-footer{
-    position: absolute;bottom: 0px;
+    position: relative;bottom: 0px;
     width: 100%;
-    background-color: blue;
+    padding: 10px 0px 20px 0px;
+    
 }
 .link-icon{
-
+    font-size: 20px;
+    padding: 5px;
+}
+.link-icon a{
+    color: black;
+}
+.menu-footer h3{
+    margin: 0;
+    padding: 0 0 0 5px;
+    font-size: 20px;
 }
 /* 側邊欄 */
-.nav::-webkit-scrollbar{
+.nav .date::-webkit-scrollbar{
     display: none;
 }
 .nav{
     position: fixed;top: 0px;right: 0px;bottom: 0px;
     background-color: #f6f6f6;
-    padding: 20px;
-    overflow: scroll;
+    padding: 20px 20px 0px 20px;
+    display: flex;
+    flex-direction: column;
 }
 .nav .date{
-    
+    overflow: scroll;
+    flex: 4;
 }
+/* live2d */
 .nav .live2d{
     position: relative;bottom: 0px;right: 0px;
+    flex: 1;
+}
+.nav .live2d .live2d-talk{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border: 1px solid black;
+    border-radius: 10px;
+    
 }
 .nav .live2d img{
     width: 200px;
 }
-
-
 /* 內文 */
 .content{
     margin-left: 16%;
+    padding: 20px;
 }
