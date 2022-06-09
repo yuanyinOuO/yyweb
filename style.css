@@ -5,6 +5,9 @@ body{
 a{
     text-decoration: none;
 }
+.hide{
+    display: none;
+}
 /* 選單 */
 .menu{
     position: fixed;top: 0px;bottom: 0px;left: 0px;
@@ -37,20 +40,13 @@ a{
 }
 .menu-middle .menu-link{
     list-style: none;
+    line-height: 20px;
     padding-left: 0px;
 }
-.menu-middle .menu-link ul{
-    line-height: 15px;
-   
+.menu-middle .menu-link li{
+    width: inherit;
 }
-.menu-middle .menu-link i.arrow{
-    margin-left: 50%;
-    color: aqua;
-}
-.menu-middle li {
-    max-width: inherit;
-}
-.menu-middle li a{
+.menu-middle .menu-link li a{
     padding: 6px 0px 6px 20px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -62,10 +58,17 @@ a{
 .menu-middle li a:hover{
     background-color: #999999;
 }
+.menu-middle .menu-link ul{
+    line-height: 15px;  
+}
+.menu-middle .menu-link i.arrow{
+    position: absolute;right: 10px;
+    color: aqua;
+}
 .menu-middle li a span{
     font-weight: bold;
 }
-.menu-middle ul li a i{
+.menu-middle ul li a i.ico{
     min-width: 20px;
     color: black;
     font-size: 20px;
@@ -73,7 +76,7 @@ a{
 }
 /* 選單底部 */
 .menu-footer{
-    position: relative;bottom: 0px;
+    position: absolute;bottom: 0px;left: 0px;
     width: 100%;
     padding: 10px 0px 20px 0px;
     
