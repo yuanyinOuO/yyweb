@@ -30,13 +30,21 @@ a{
     font-size: 20px;
     margin: 0px;
 }
+.menu-top h3{
+    font-size: 90%;
+    color: #777777;
+    margin: 2px 0 2px 0;
+}
+.menu-top h3 i{
+    margin-right: 3px;
+}
 /* 選單連結 */
 .menu-middle::-webkit-scrollbar{
     display: none;
 }
 .menu-middle{
     overflow: scroll;
-    
+    flex: 4;
 }
 .menu-middle .menu-link{
     list-style: none;
@@ -62,7 +70,7 @@ a{
     line-height: 15px;  
 }
 .menu-middle .menu-link i.arrow{
-    position: absolute;right: 10px;
+    float: inline-end;
     color: aqua;
 }
 .menu-middle li a span{
@@ -76,10 +84,10 @@ a{
 }
 /* 選單底部 */
 .menu-footer{
-    position: absolute;bottom: 0px;left: 0px;
+    position: relative;bottom: 0;left: 0px;
     width: 100%;
     padding: 10px 0px 20px 0px;
-    
+    flex: 1;
 }
 .link-icon{
     font-size: 20px;
@@ -115,6 +123,7 @@ a{
 }
 .nav .live2d .live2d-talk{
     text-align: center;
+    margin-top: 20px;
     padding: 20px 0 20px 0;
     border: 1px solid black;
     border-radius: 10px;
@@ -123,6 +132,12 @@ a{
 .nav .live2d img{
     width: 200px;
 }
+/* 手機 */
+@media screen and (max-width: 600px) {
+    aside.nav{
+        display: none;
+    }
+  }
 /* 內文 */
 .content{
     margin-left: 16%;
