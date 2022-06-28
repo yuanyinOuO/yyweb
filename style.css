@@ -20,10 +20,21 @@ a{
 .menu-top{
     text-align: center;
 }
+.menu-topicon{
+    text-align: end;
+}
+.menu-topicon i{
+    font-size: 30px;
+    margin: 10px 10px 0 0;
+}
+.menu-topicon i:hover{
+    background-color: white;
+    cursor: pointer;
+}
 .menu img{
     width: 40%;
     border-radius: 50px;
-    margin-top: 25px;
+    margin-top: 0px;
 }
 .menu h2{
     font-size: 20px;
@@ -45,6 +56,78 @@ a{
     overflow: scroll;
     flex: 4;
 }
+/* LV2-menu */
+.menu-middle .menu-LV1 ul{
+    list-style: none;
+    padding-left: 0px;
+}
+.menu-middle .menu-LV1 a{
+    text-decoration: none;
+}
+.menu-middle .menu-LV1 i{
+    font-size: 20px;
+    margin: 0 10px 0 20px;
+}
+.menu-middle .menu-LV1 span{
+    font-size: 20px;
+    font-weight: bold;
+}
+.menu-middle .menu-LV1{
+    background: #f6f6f6;
+    /*box-shadow: 0px 1px 3px #00000088;*/
+    &::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    span{ /* Logo */
+        float: left;
+        padding-left: 50px;
+        line-height: 50px;
+    }
+}
+input{
+    display: none;
+}
+/* 漢堡按鈕 */
+label{
+    float: right;
+    padding-right: 50px;
+    i{
+        width: 30px;   
+        vertical-align: middle;
+    }
+}
+/* 選單列 */
+.menu-middle .menu-LV1 .menu-LV2{
+    clear: both;
+    background: #f6f6f6;
+    li{
+        text-align: center;
+        border-bottom: 1px solid #efefef;
+        a{
+            display: block;
+            padding: 10px 0;
+            font-size: 18px;
+            color: #5d5d5d;
+            &:hover{
+                background: #5d5d5d;
+                color: #fff;
+            }
+        }
+    }
+}
+.menu-LV2{
+    max-height: 0;
+    overflow: hidden;
+    /*transition: .5s;*/ /* 動畫秒數 */
+}
+input:checked ~ #link-1,
+input:checked ~ #link-2{
+    max-height: 300px;
+}
+
+/* end */
 .menu-middle .menu-link{
     list-style: none;
     line-height: 20px;
