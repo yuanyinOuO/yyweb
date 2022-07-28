@@ -5,257 +5,131 @@ body{
 a{
     text-decoration: none;
 }
-.hide{
-    display: none;
-}
-/* 選單 */
-.menu{
-    position: fixed;top: 0px;bottom: 0px;left: 0px;
+/* left 側邊欄 */
+nav{
+    position: fixed;top: 0;left: 0;
+    height: 100%;
     width: 16%;
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
 }
-/* 選單頂部 */
-.menu-top{
+/* top nav */
+.top{
     text-align: center;
 }
-.menu-topicon{
-    text-align: end;
-}
-.menu-topicon i{
-    font-size: 30px;
-    margin: 10px 10px 0 0;
-}
-.menu-topicon i:hover{
-    background-color: white;
-    cursor: pointer;
-}
-.menu img{
+nav div img{
     width: 40%;
     border-radius: 50px;
-    margin-top: 0px;
-}
-.menu h2{
-    font-size: 20px;
-    margin: 0px;
-}
-.menu-top h3{
-    font-size: 90%;
-    color: #777777;
-    margin: 2px 0 2px 0;
-}
-.menu-top h3 i{
-    margin-right: 3px;
-}
-/* 選單連結 */
-.menu-middle::-webkit-scrollbar{
-    display: none;
-}
-.menu-middle{
-    overflow: scroll;
-    flex: 4;
-}
-/* LV2-menu */
-.menu-middle .menu-LV1 ul{
-    list-style: none;
-    padding-left: 0px;
-}
-.menu-middle .menu-LV1 a{
-    text-decoration: none;
-}
-.menu-middle .menu-LV1 i{
-    font-size: 20px;
-    margin: 0 10px 0 20px;
-}
-.menu-middle .menu-LV1 span{
-    font-size: 20px;
-    font-weight: bold;
-}
-.menu-middle .menu-LV1{
-    background: #f6f6f6;
-    /*box-shadow: 0px 1px 3px #00000088;*/
-    &::after{
-        content: "";
-        display: block;
-        clear: both;
-    }
-    span{ /* Logo */
-        float: left;
-        padding-left: 50px;
-        line-height: 50px;
-    }
-}
-input{
-    display: none;
-}
-/* 漢堡按鈕 */
-label{
-    float: right;
-    padding-right: 50px;
-    i{
-        width: 30px;   
-        vertical-align: middle;
-    }
-}
-/* 選單列 */
-.menu-middle .menu-LV1 .menu-LV2{
-    clear: both;
-    background: #f6f6f6;
-    li{
-        text-align: center;
-        border-bottom: 1px solid #efefef;
-        a{
-            display: block;
-            padding: 10px 0;
-            font-size: 18px;
-            color: #5d5d5d;
-            &:hover{
-                background: #5d5d5d;
-                color: #fff;
-            }
-        }
-    }
-}
-.menu-LV2{
-    max-height: 0;
-    overflow: hidden;
-    /*transition: .5s;*/ /* 動畫秒數 */
-}
-input:checked ~ #link-1,
-input:checked ~ #link-2{
-    max-height: 300px;
+    margin-top: 10px;
 }
 
-/* end */
-.menu-middle .menu-link{
+/* middle nav */
+.middle{
+    flex: 1;
+    overflow: scroll;
+}
+.middle::-webkit-scrollbar{
+    display: none;
+}
+.middle .menu{
     list-style: none;
-    line-height: 20px;
-    padding-left: 0px;
+    margin: 0;
+    padding: 0;
+    text-align: start;
 }
-.menu-middle .menu-link li{
-    width: inherit;
-}
-.menu-middle .menu-link li a{
-    padding: 6px 0px 6px 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: block;
-    text-decoration: none;
-    color: black;
-    width: inherit;
-}
-.menu-middle li a:hover{
+    /* one-layer */
+    .middle .menu .one-layer{
+        padding-left: 20px;
+        font-size: 20px;
+        color: black;
+        line-height: 30px;
+    }
+    .middle .menu .one-layer i.arrow{
+        position: absolute;right: 5px;
+    }
+    /* two-layer */
+    .middle .menu .listmenu{
+        display: none;
+        list-style: none;
+    }
+    .middle .menu .listmenu a li{
+        font-size: 20px;
+    }
+    .middle .menu .listmenu .two-layer{
+        color: black;
+    }
+
+.middle .menu .one-layer:hover,
+.middle .menu .two-layer:hover{
     background-color: #999999;
 }
-.menu-middle .menu-link ul{
-    line-height: 15px;  
-}
-.menu-middle .menu-link i.arrow{
-    float: inline-end;
-    color: aqua;
-}
-.menu-middle li a span{
-    font-weight: bold;
-}
-.menu-middle ul li a i.ico{
-    min-width: 20px;
-    color: black;
-    font-size: 20px;
-    margin-right: 10px;
-}
-/* 選單底部 */
-.menu-footer{
+
+/* bottom nav */
+.bottom{
     position: relative;bottom: 0;left: 0px;
     width: 100%;
     padding: 10px 0px 20px 0px;
-    flex: 1;
 }
 .link-icon{
     font-size: 20px;
     padding: 5px;
+    text-align: start;
 }
 .link-icon a{
     color: black;
 }
-.menu-footer h3{
+.bottom h3{
     margin: 0;
     padding: 0 0 0 5px;
     font-size: 20px;
+    text-align: start;
 }
-/* 側邊欄 */
-.nav .date::-webkit-scrollbar{
+
+
+
+
+/* right 側邊欄 */
+aside .date::-webkit-scrollbar{
     display: none;
 }
-.nav{
+aside{
     position: fixed;top: 0px;right: 0px;bottom: 0px;
     background-color: #f6f6f6;
     padding: 20px 20px 0px 20px;
+    width: 200px;
     display: flex;
     flex-direction: column;
 }
-.nav .date{
+aside .date{
     overflow: scroll;
     flex: 4;
 }
-/* live2d */
-.nav .live2d{
-    position: relative;bottom: 0px;right: 0px;
-    flex: 1;
-}
-.nav .live2d .live2d-talk{
-    text-align: center;
-    margin-top: 20px;
-    padding: 20px 0 20px 0;
-    border: 1px solid black;
-    border-radius: 10px;
-    
-}
-.nav .live2d img{
-    width: 200px;
-}
+
 /* 內文 */
-.content{
+main{
     margin: 0 240px 0 16%;
     padding: 20px;
 }
-.content .content-topimg{
-    background-image: url(picture/8.jpg);
-    background-size: 100%;
-    height: 300px;
-    margin: -20px -20px 0 -20px;
-    background-position: 0 -200px;
-    background-repeat: no-repeat;
-    background-origin: border-box;
-}
-.content .box{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-.content .box:hover{
-    border: #777777 solid 1px;
-}
-.content .box img{
-    width: 100px;
-    height: 100px;
-    border: #777777 solid 1px;
-    padding: 3px;
-    margin: 3px;
-}
-.content .box p{
-    margin: 0;
-    padding: 0;
-}
+    /* live2d */
+    main .live2d{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+    main .live2d p{
+        text-align: center;
+        flex: 1;
+        border: 1px dashed black;
+        border-radius: 10px;
+        box-sizing: border-box;
+        font-size: 50px;
+        height: 100%;
+    }
+    main .live2d img{
+    width: 30%;
+    }
 /* 手機 */
 @media screen and (max-width: 600px) {
-    .menu{
-        width: 30%;
-    }
-    aside.nav{
-        display: none;
-    }
-    .content{
-        margin-left: 30%;
-    }
+    
 }

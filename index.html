@@ -10,60 +10,95 @@
         
     </head>
     <body>
-        <!--選單-->
-        <header class="menu">
-            <!-- 選單頂部 -->
-            <div class="menu-top">
-                <div class="menu-topicon"><i class='bx bx-menu'></i></div>
-                <a><img src="picture/miku - _236 x 236_.jpeg"></a>
-                <h2>yuanyin</h2>
-                <h3><i class='bx bx-body'></i>student</h3>
-                <h3><i class='bx bxs-map'></i>Taiwan</h3>
+        <!-- left 側邊欄 -->
+        <nav>
+            <!-- top nav -->
+            <div class="top">
+                <img id="headimg" src="picture/miku - _236 x 236_.jpeg">
+                <p>yuanyain</p>
                 <hr/>
             </div>
-            <div class="menu-middle">
-                <ul class="menu-link">
+            <!-- middle nav -->
+            <div class="middle">
+                <ul class="menu">
+                    <a id="home" target="_blank" href="https://yuanyinouo.github.io/yyweb/">
+                        <li class="one-layer">
+                            <i class='bx bxs-home'>home</i>
+                        </li>
+                    </a>
 
-                
-                    <!-- 1 link -->
-                    <li id="home">
-                        <a href=".">
-                            <i class='bx bxs-home ico'></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <!-- 2 link -->
-                    <li id="note">
-                        <a onclick="toggleMenu(1)" href="#">
-                            <i class='bx bx-notepad ico'></i>
-                            <span>Note</span>
-                            <i class='bx bxs-chevron-down arrow' ></i>
-                        </a>
-                        <ul id="menu-1">
-                            <a target="_blank" href="https://hackmd.io/@Yuanyin/note/https%3A%2F%2Fhackmd.io%2F%40Yuanyin%2Fnote">元凐的筆記總覽</a>
-                            <a target="_blank" href="https://hackmd.io/@Yuanyin/r1P-7yDDO/https%3A%2F%2Fhackmd.io%2F%40Yuanyin%2Fr1P-7yDDO">高中課業整理</a>
-                        </ul>
-                    </li>
-                    <!-- 3 link -->
-               
-                    <!-- 4 link -->
-                   
+                    <a id="note" target="_blank" href="https://hackmd.io/@Yuanyin/note">
+                        <li class="one-layer">
+                            <i class='bx bx-notepad'>yynote</i>
+                        </li>
+                    </a>
+                    
+                    <a href="#" class="dropdown-btn">
+                        <li class="one-layer">
+                            <i class='bx bx-notepad'>Dropdown</i>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </li>
+                    </a>
+                    <ul class="listmenu">
+                        <a target="_blank" href="https://translate.google.com/?hl=zh-TW"><li class="two-layer">google 翻譯</li></a>
+                        <a target="_blank" href="2"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="3"><li class="two-layer">1</li></a>
+                    </ul>
+
+                    <a href="#" class="dropdown-btn">
+                        <li class="one-layer">
+                            <i class='bx bx-notepad'>Dropdown</i>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </li>
+                    </a>
+                    <ul class="listmenu">
+                        <a target="_blank" href="1"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="2"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="3"><li class="two-layer">1</li></a>
+                    </ul>
+
+                    <a href="#" class="dropdown-btn">
+                        <li class="one-layer">
+                            <i class='bx bx-notepad'>Dropdown</i>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </li>
+                    </a>
+                    <ul class="listmenu">
+                        <a target="_blank" href="1"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="2"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="3"><li class="two-layer">1</li></a>
+                    </ul>
+
+                    <a href="#" class="dropdown-btn">
+                        <li class="one-layer">
+                            <i class='bx bx-notepad'>Dropdown</i>
+                            <i class='bx bx-chevron-down arrow' ></i>
+                        </li>
+                    </a>
+                    <ul class="listmenu">
+                        <a target="_blank" href="1"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="2"><li class="two-layer">1</li></a>
+                        <a target="_blank" href="3"><li class="two-layer">1</li></a>
+                    </ul>
+        
+                    
                     
                 </ul>
+
             </div>
-            <!-- 選單底部 -->
-            <div class="menu-footer">
+            <!-- bottom nav -->
+            <div class="bottom">
                 <hr/>
                 <div class="link-icon">
-                    <a target="_blank" href="mailto:yuanyin.contact@gmail.com"><i class='bx bxs-envelope'></i></i></i></a>
+                    <a target="_blank" href="mailto:yuanyin.contact@gmail.com"><i class='bx bxs-envelope'></i></a>
                     <a target="_blank" href="https://www.facebook.com/profile.php?id=100006835813704"><i class='bx bxl-facebook-circle'></i></a>
                     <a target="_blank" href="https://discord.gg/ue4ygPb9jP"><i class='bx bxl-discord'></i></a>
                     <a target="_blank" href=""><i class='bx bxl-youtube'></i></a>
                 </div>
                 <h3>冰冷的左下角!!</h3>
             </div>
-        </header>
-        <!-- 側邊欄 -->
+          </nav>
+        <!-- right 側邊欄 -->
         <aside class="nav">
             <div class="date">
                 <h3><i class='bx bxs-megaphone'></i>公告</h3>
@@ -75,120 +110,17 @@
                     <li>7/11~12考試</li>
                     <li>7/27成績單寄出</li>
                 </ul>
-                <ul>
-                    <li>6/9~20分科報名</li>
-                    <li>7/4應試號碼簡訊通知</li>
-                    <li>7/7考場公布</li>
-                    <li>7/11~12考試</li>
-                    <li>7/27成績單寄出</li>
-                </ul>
-                <ul>
-                    <li>6/9~20分科報名</li>
-                    <li>7/4應試號碼簡訊通知</li>
-                    <li>7/7考場公布</li>
-                    <li>7/11~12考試</li>
-                    <li>7/27成績單寄出</li>
-                </ul>
-                <ul>
-                    <li>6/9~20分科報名</li>
-                    <li>7/4應試號碼簡訊通知</li>
-                    <li>7/7考場公布</li>
-                    <li>7/11~12考試</li>
-                    <li>7/27成績單寄出</li>
-                </ul>
-                <ul>
-                    <li>6/9~20分科報名</li>
-                    <li>7/4應試號碼簡訊通知</li>
-                    <li>7/7考場公布</li>
-                    <li>7/11~12考試</li>
-                    <li>7/27成績單寄出</li>
-                </ul>
+                
 
             </div>
-            <div class="live2d">
-                <div id="live2dtalk" class="live2d-talk">welcome!</div>
-                <img src="picture/1.png">
-            </div>
+            
         </aside>
         <!-- 內文 -->
-        <main class="content">
-            <div class="content-topimg">
-                
+        <main>
+            <div class="live2d">
+                <img src="picture/1.png">
+                <p id="live2d-talk" class="live2d-talk">welcome!</p>
             </div>
-            <div class="box">
-                <img src="https://svgdb.me/assets/fullart/1245310101.png">
-                <div>
-                    <p>12332323</p>
-                    <p>12314</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="https://svgdb.me/assets/fullart/1245310101.png">
-                <div>
-                    <p>12332323</p>
-                    <p>12314</p>
-                </div>
-            </div>
-            <div class="box">
-                <img src="https://svgdb.me/assets/fullart/1245310101.png">
-                <div>
-                    <p>12332323</p>
-                    <p>12314</p>
-                </div>
-            </div>
-            
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            <div>123</div>
-            
-            
         </main>
         <script src="javascript.js"></script>
     </body>
