@@ -1,0 +1,1 @@
+$(".navpage").load("./parts/nav.html");
