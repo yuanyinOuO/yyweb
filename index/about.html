@@ -8,6 +8,33 @@
     <script src="../js/jquery-3.6.1.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel=stylesheet type="text/css" href="../css/style.css">
     <title>Document</title>
+    <style>
+        .music-btn{
+            display: inline-block;
+            
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 25px;
+            height: 25px;
+            background-color: #f6f6f6;
+            border: none;
+        }
+        .music-btn:hover{
+            border: 1px solid black;
+        }
+        #Img{
+            vertical-align: middle;
+            width: 20px;
+            height: 20px;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
     <div class="navpage"></div>
@@ -17,21 +44,48 @@
     <main>
         <script src="../js/music.js"></script>
     
-        <i class='bx bx-play-circle'><iframe id="iframe" width="100px" height="100px" src="https://www.youtube.com/embed/RQrkbhdQ3zc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></i>
-        <i class='bx bx-stop-circle'></i>
+        
+        
 
 
         
-        <audio controls>
+        <audio id="audio">
             <source src="https://drive.google.com/uc?export=download&id=1nnKDEBzdGHEPbplooAtRQLA_rkhMlW0n" preload="none" loop controls type="audio/mpeg">
         </audio>
         <audio controls>
             <source src="https://drive.google.com/uc?export=download&id=1auDWY7x-Lza0hBbiLLIKNxY605kfX-Rk" preload="none" loop controls type="audio/mpeg">
         </audio>
 
-
+        <div>
+            
+            <button class="music-btn" id="play"><img id="Img" src="../picture/bx-play.svg"></button>
+            <button id="next"><img src="../picture/bx-skip-next.svg"></button>
+        </div>
+        
     </main>
     <script>
+        var music123 = ["https://drive.google.com/uc?export=download&id=1nnKDEBzdGHEPbplooAtRQLA_rkhMlW0n","https://drive.google.com/uc?export=download&id=1auDWY7x-Lza0hBbiLLIKNxY605kfX-Rk"];
+        
+        play.onclick = function(){
+            if(audio.paused){
+                audio.play();
+                Img.src = '../picture/bx-pause.svg';
+            }
+            else if(audio.played){
+                audio.pause();
+                Img.src = '../picture/bx-play.svg';
+            }
+        }
+        next.onclick = function(){
+            var num = 0;
+            if(num<1){
+                audio.src = music123[num+1];
+            }
+            else{
+                num = 0;
+            }
+        }
+        
         
     </script>
 
