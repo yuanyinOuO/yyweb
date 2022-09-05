@@ -1,85 +1,104 @@
-body{
+body {
     margin: 0px;
-    cursor: url(),auto;
+    cursor: url(), auto;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 /* left 側邊欄 */
-nav{
-    position: fixed;top: 0;left: 0;
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     height: 100%;
     width: 16%;
     background-color: #f6f6f6;
     display: flex;
     flex-direction: column;
 }
+
 /* top nav */
-.top{
+.top {
     text-align: center;
 }
-nav div img{
+
+nav div img {
     width: 40%;
     border-radius: 50px;
     margin-top: 10px;
 }
 
 /* middle nav */
-.middle{
+.middle {
     flex: 1;
     overflow: scroll;
 }
-.middle::-webkit-scrollbar{
+
+.middle::-webkit-scrollbar {
     display: none;
 }
-.middle .menu{
+
+.middle .menu {
     list-style: none;
     margin: 0;
     padding: 0;
     text-align: start;
 }
-    /* one-layer */
-    .middle .menu .one-layer{
-        padding-left: 20px;
-        font-size: 20px;
-        color: black;
-        line-height: 30px;
-    }
-    .middle .menu .one-layer i.arrow{
-        position: absolute;right: 5px;
-    }
-    /* two-layer */
-    .middle .menu .listmenu{
-        display: none;
-        list-style: none;
-    }
-    .middle .menu .listmenu a li{
-        font-size: 20px;
-    }
-    .middle .menu .listmenu .two-layer{
-        color: black;
-    }
+
+/* one-layer */
+.middle .menu .one-layer {
+    padding-left: 20px;
+    font-size: 20px;
+    color: black;
+    line-height: 30px;
+}
+
+.middle .menu .one-layer i.arrow {
+    position: absolute;
+    right: 5px;
+}
+
+/* two-layer */
+.middle .menu .listmenu {
+    display: none;
+    list-style: none;
+}
+
+.middle .menu .listmenu a li {
+    font-size: 20px;
+}
+
+.middle .menu .listmenu .two-layer {
+    color: black;
+}
 
 .middle .menu .one-layer:hover,
-.middle .menu .two-layer:hover{
+.middle .menu .two-layer:hover {
     background-color: #999999;
 }
 
 /* bottom nav */
-.bottom{
-    position: relative;bottom: 0;left: 0px;
+.bottom {
+    position: relative;
+    bottom: 0;
+    left: 0px;
     width: 100%;
     padding: 10px 0px 20px 0px;
 }
-.link-icon{
+
+.link-icon {
     font-size: 20px;
     padding: 5px;
     text-align: start;
 }
-.link-icon a{
+
+.link-icon a {
     color: black;
 }
-.bottom h3{
+
+.bottom h3 {
     margin: 0;
     padding: 0 0 0 5px;
     font-size: 20px;
@@ -90,46 +109,89 @@ nav div img{
 
 
 /* right 側邊欄 */
-aside .date::-webkit-scrollbar{
+aside .date::-webkit-scrollbar {
     display: none;
 }
-aside{
-    position: fixed;top: 0px;right: 0px;bottom: 0px;
+
+aside {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
     background-color: #f6f6f6;
     padding: 20px 20px 0px 20px;
     width: 200px;
     display: flex;
     flex-direction: column;
 }
-aside .date{
+
+aside .date {
     overflow: scroll;
     flex: 4;
 }
 
 /* 內文 */
-main{
+main {
     margin: 0 240px 0 16%;
     padding: 20px;
 }
-    /* live2d */
-    main .live2d{
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-    }
-    main .live2d p{
-        text-align: center;
-        flex: 1;
-        border: 1px dashed black;
-        border-radius: 10px;
-        box-sizing: border-box;
-        font-size: 50px;
-        height: 100%;
-    }
-    main .live2d img{
+
+/* live2d */
+main .live2d {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+main .live2d p {
+    text-align: center;
+    flex: 1;
+    border: 1px dashed black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 50px;
+    height: 100%;
+}
+
+main .live2d img {
     width: 30%;
-    }
+}
+
 /* 手機 */
-@media screen and (max-width: 600px) {
-    
+@media screen and (max-width: 600px) {}
+
+
+.asideMenu {
+    width: 300px;
+    /*background-color: #474747;*/
+    position: absolute;top: 0;bottom: 0;left: 0px;
+    border-right: 5px solid #ff9a15;
+    padding: 20px;
+    /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.asideMenu.active {
+    transform: translateX(-345px);
+}
+
+.asideMenu .btn {
+    position: absolute;top: 50%;right: -13%;
+    padding: 40px 10px;
+    background-color: #ff9a15;
+    border-radius: 0 6px 6px 0;
+    border: none;
+    /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
+}
+
+.asideMenu .btn .bx-chevron-right {
+    font-size: 20px;
+    color: #474747;
+    transform: rotate(0);
+    transition: all 0.5s;
+}
+
+.asideMenu .btn .bx-chevron-right.rotate {
+    transform: rotate(180deg);
 }
