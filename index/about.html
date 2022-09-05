@@ -27,10 +27,11 @@
         .music-btn:hover{
             border: 1px solid black;
         }
-        #Img{
+        .music-ico{
             vertical-align: middle;
             width: 20px;
             height: 20px;
+            border-radius: 10px;
             padding: 0;
             margin: 0;
         }
@@ -52,19 +53,21 @@
         <audio id="audio">
             <source src="https://drive.google.com/uc?export=download&id=1nnKDEBzdGHEPbplooAtRQLA_rkhMlW0n" preload="none" loop controls type="audio/mpeg">
         </audio>
-        <audio controls>
-            <source src="https://drive.google.com/uc?export=download&id=1auDWY7x-Lza0hBbiLLIKNxY605kfX-Rk" preload="none" loop controls type="audio/mpeg">
-        </audio>
+        
 
         <div>
-            
-            <button class="music-btn" id="play"><img id="Img" src="../picture/bx-play.svg"></button>
-            <button id="next"><img src="../picture/bx-skip-next.svg"></button>
+            <button class="music-btn" id="previous"><img class="music-ico" src="../picture/bx-skip-previous.svg"></button>
+            <button class="music-btn" id="play"><img class="music-ico" id="Img" src="../picture/bx-play.svg"></button>
+            <button class="music-btn" id="next"><img class="music-ico" src="../picture/bx-skip-next.svg"></button>
         </div>
         
     </main>
     <script>
-        var music123 = ["https://drive.google.com/uc?export=download&id=1nnKDEBzdGHEPbplooAtRQLA_rkhMlW0n","https://drive.google.com/uc?export=download&id=1auDWY7x-Lza0hBbiLLIKNxY605kfX-Rk"];
+        var music123 = ["https://drive.google.com/uc?export=download&id=1nnKDEBzdGHEPbplooAtRQLA_rkhMlW0n",
+                        "https://drive.google.com/uc?export=download&id=1auDWY7x-Lza0hBbiLLIKNxY605kfX-Rk",
+                        "https://drive.google.com/uc?export=download&id=1EXMxMyXlcDiM0kWVB2Jz82pe9KLSAxx7",
+                        "https://drive.google.com/uc?export=download&id=1i1Q6NydQmZebmX2-EEVtcH2jTuV0Bh31",
+                        "https://drive.google.com/uc?export=download&id=1eEgCvnQdVKqmNCWXyGnq_KSMOILkFN0T"];
         
         play.onclick = function(){
             if(audio.paused){
@@ -76,16 +79,27 @@
                 Img.src = '../picture/bx-play.svg';
             }
         }
+        var num = 0;
         next.onclick = function(){
-            var num = 0;
-            if(num<1){
+            if(num<4){
                 audio.src = music123[num+1];
+                audio.play();
+                num++;
             }
             else{
                 num = 0;
             }
         }
-        
+        previous.onclick = function(){
+            if(num>0){
+                audio.src = music123[num-1]
+                audio.play();
+                num--;
+            }
+            else{
+                num = 4;
+            }
+        }
         
     </script>
 
