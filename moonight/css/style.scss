@@ -1,0 +1,133 @@
+body {
+    padding: 0;
+    overflow: hidden;
+}
+
+/* rightaside */
+.rightaside-menu,
+.rightaside-date,
+.rightaside-aboutlink{
+    position: absolute;top: 0;bottom: 0;right: 0;
+    
+    padding: 5px;
+    /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
+    transform: translateX(0);
+    transition: all 0.5s;
+    transform: translateX(100%);
+
+    &.active {
+        transform: translateX(0);
+    }
+
+    & h1{
+        margin-left: 10px;
+    }
+}
+#menu-btn,
+#date-btn,
+#aboutlink-btn{
+    position: absolute;top: 0%;left: -44px;
+    padding: 10px;
+    border-radius: 6px 0 0 6px;
+    border: none;
+    /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
+    .bx-chevron-left {
+        font-size: 20px;
+        color: #474747;
+        transform: rotate(0);
+        transition: all 0.5s;
+        &.rotate {
+            transform: rotate(180deg);
+        }
+    }
+}
+    /* rightaside style settigh */
+    .rightaside-menu{
+        width: 16%;
+        background-color: #f6f6f6;
+        border-left: 5px solid lightblue;
+        & #menu-btn{
+            position: absolute;top: 0%;left: -44px;
+            background-color: lightblue;
+        }
+    }
+    .rightaside-date{
+        width: 45%;
+        background-color: lightcoral;
+        border-left: 5px solid lightblue;
+        & #date-btn{
+            position: absolute;top: 7%;left: -44px;
+            background-color: lightcoral;
+        }
+    }
+    .rightaside-aboutlink{
+        width: 16%;
+        background-color: lightcyan;
+        border-left: 5px solid lightblue;
+        & #aboutlink-btn{
+            position: absolute;top: 14%;left: -44px;
+            background-color: lightcyan;
+        }
+    }
+/* rightaside content */
+/* menu */
+/* date */
+.rightaside-date .date{
+    border: none;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+/* aboutlink */
+
+
+
+
+
+
+
+/* main index parts position */
+.miku-music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & p {
+        margin: 100px 0 2px 0;
+        max-width: max-content;
+        border: 1px solid black;
+        padding: 2px;
+        box-sizing: border-box;
+    }
+
+    & #miku {
+        margin: 5px;
+
+        & img {
+            width: 300px;
+        }
+    }
+}
+
+/* music style */
+.music-ico {
+    display: inline-block;
+    box-sizing: border-box;
+    color: black;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    padding: 0;
+    margin: 2px;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid black;
+    }
+    & i{
+        text-align: center;
+        vertical-align: middle;
+        font-size: 20px;
+    }
+}
