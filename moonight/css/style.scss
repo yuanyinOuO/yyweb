@@ -2,8 +2,8 @@ body {
     padding: 0;
     overflow: hidden;
 }
-button{
-    outline: none;
+* {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 /* rightaside */
 .rightaside-menu,
