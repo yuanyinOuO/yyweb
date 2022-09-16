@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="./images/thinking.ico" type="image/x-icon">
     <link rel=stylesheet type="text/css" href="css/style.css">
     <script src="./js/jquery-3.6.1.min.js"></script>
+    <script type="text/javascript" src="./js/mouseStar.js"></script>
     <title>welcome!</title>
 </head>
 <body>
-    
+    <canvas id="canvas"></canvas>
     <div class="menupage"></div>
     <div class="datepage"></div>
     <div class="aboutlink"></div>
     
     <div class="miku-music">
-        <p id="text">hi</p>
+        <p id="text">嗨</p>
         <div id="miku"><img src="./images/1.png"></div>
         <div class="music-ctl"></div>
     </div>
     
 
-
+   
     <script>
         $(".music-ctl").load("./parts/music.html");
         $(".menupage").load('./parts/rightaside/menu.html');
@@ -31,7 +33,10 @@
         $(".aboutlink").load('./parts/rightaside/aboutlink.html');
     </script>
     <script src="./js/text.js"></script>
-    <script src="./js/music.js"></script>
     <script src="./js/nav.js"></script>
+    <script src="./js/music.js"></script>
+
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

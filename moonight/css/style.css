@@ -1,10 +1,15 @@
-body {
+html, body {
   padding: 0;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
-button {
-  outline: none;
+body::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /* rightaside */
@@ -15,6 +20,8 @@ button {
   top: 0;
   bottom: 0;
   right: 0;
+  height: 100%;
+  box-sizing: border-box;
   padding: 5px;
   /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
   transform: translateX(0);
@@ -42,6 +49,13 @@ button {
   border-radius: 6px 0 0 6px;
   border: none;
   /*box-shadow: 0 0 5px hsla(240, 40%, 15%, 0.6);*/
+}
+#menu-btn .RA-content,
+#date-btn .RA-content,
+#aboutlink-btn .RA-content {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 #menu-btn .bx-chevron-left,
 #date-btn .bx-chevron-left,
@@ -97,11 +111,11 @@ button {
 /* rightaside content */
 /* menu */
 /* date */
-.rightaside-date .date {
+.rightaside-date .RA-content .date {
   border: none;
   margin: 0;
   width: 100%;
-  height: 100%;
+  height: 600px;
 }
 
 /* aboutlink */
@@ -140,9 +154,6 @@ button {
   padding: 0;
   margin: 2px;
   cursor: pointer;
-}
-.music-ico:hover {
-  border: 1px solid black;
 }
 .music-ico i {
   text-align: center;
